@@ -67,7 +67,9 @@ status-website:
   introMessage: "Vitrin, sipariş, fiyat ve arama servislerimizin anlık durumu. Kontroller her 5 dakikada bir, Solar Toptan altyapısından **bağımsız** olarak yapılır."
   theme: night
   # Vitrinle uyumlu nötr koyu palet (zinc) - night temasının renklerini ezer.
-  css: ":root{--body-background-color:#09090b;--body-text-color:#e4e4e7;--card-background-color:#18181b;--card-border-color:#27272a;--nav-background-color:#09090b;--nav-border-bottom-color:#27272a;--nav-current-border-bottom-color:#10b981;--up-border-left-color:#10b981;--tag-up-background-color:#10b981;--tag-color:#09090b} a{color:#a1a1aa} .changed,.status{border-radius:12px} article,section>a,.card{border-radius:12px}"
+  # MOBİL UYUM (kurallar 6.6): 640px altı için ayrı kurallar - değiştirince
+  # 390px genişlikte tarayıcıda kontrol et.
+  css: ":root{--body-background-color:#09090b;--body-text-color:#e4e4e7;--card-background-color:#18181b;--card-border-color:#27272a;--nav-background-color:#09090b;--nav-border-bottom-color:#27272a;--nav-current-border-bottom-color:#10b981;--up-border-left-color:#10b981;--tag-up-background-color:#10b981;--tag-color:#09090b} a{color:#a1a1aa} article h4 a{color:#f4f4f5} .changed,.status,article{border-radius:12px} article.graph{background-image:linear-gradient(rgba(24,24,27,.45),rgba(24,24,27,.45)),var(--background)!important} @media (max-width:640px){nav{overflow-x:visible!important;padding:0 .75rem!important}nav .container{display:flex!important;align-items:center;justify-content:space-between;gap:.5rem}nav .logo>div{display:none!important}nav ul{display:flex!important;gap:.25rem;margin:0!important;padding:0!important}nav ul li a{padding-left:.5rem!important;padding-right:.5rem!important;font-size:.9rem}article.graph{background-size:100% 36px!important;background-position:left bottom!important;padding-bottom:3.25rem!important}}"
   navbar:
     - title: Durum
       href: /
