@@ -1,7 +1,7 @@
-url: https://api.solartoptan.com/store/regions?fields=id
+url: https://dev-api.solartoptan.com/health/ready
 status: up
 code: 200
-responseTime: 774
-lastUpdated: 2026-11-10T14:11:51.087Z
+responseTime: 542
+lastUpdated: 2026-11-10T15:12:08.243Z
 startTime: 2026-11-10T14:10:26.799Z
 generator: Upptime <https://github.com/upptime/upptime>
