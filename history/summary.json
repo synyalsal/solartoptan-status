@@ -91,7 +91,7 @@
   },
   {
     "name": "Sipariş ve Hesap Sistemi",
-    "url": "https://dev-api.solartoptan.com/health/ready",
+    "url": "https://api.solartoptan.com/health/ready",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/server.svg",
     "slug": "siparis-ve-hesap-sistemi",
     "status": "up",
@@ -109,7 +109,7 @@
   },
   {
     "name": "Arka Plan İşleri",
-    "url": "https://dev-api.solartoptan.com/health/ready?component=worker",
+    "url": "https://api.solartoptan.com/health/ready?component=worker",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/cpu.svg",
     "slug": "arka-plan-isleri",
     "status": "up",
