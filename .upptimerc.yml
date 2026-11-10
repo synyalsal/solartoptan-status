@@ -58,9 +58,8 @@ assignees:
   - synyalsal
 
 status-website:
-  # Önizleme: https://synyalsal.github.io/solartoptan-status/
-  # Canlıya alınırken: baseUrl satırı silinir, cname: status.solartoptan.com eklenir.
-  baseUrl: /solartoptan-status
+  # Cloudflare DNS: status CNAME synyalsal.github.io, proxy KAPALI (gri bulut).
+  cname: status.solartoptan.com
   logoUrl: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
   favicon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/favicon.ico
   name: Solar Toptan Servis Durumu
