@@ -2,7 +2,7 @@
   {
     "name": "Vitrin",
     "url": "https://solartoptan.com/",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/store.svg",
     "slug": "vitrin",
     "status": "up",
     "uptime": "100.00%",
@@ -20,7 +20,7 @@
   {
     "name": "Ürün Kataloğu",
     "url": "https://solartoptan.com/store",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/package.svg",
     "slug": "ueruen-katalogu",
     "status": "up",
     "uptime": "100.00%",
@@ -38,7 +38,7 @@
   {
     "name": "Kategoriler",
     "url": "https://solartoptan.com/categories",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/layout-grid.svg",
     "slug": "kategoriler",
     "status": "up",
     "uptime": "100.00%",
@@ -56,7 +56,7 @@
   {
     "name": "Ürün Arama",
     "url": "https://solartoptan.com/api/search",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/search.svg",
     "slug": "ueruen-arama",
     "status": "up",
     "uptime": "100.00%",
@@ -74,7 +74,7 @@
   {
     "name": "Fiyat Servisi",
     "url": "https://solartoptan.com/api/prices",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/tag.svg",
     "slug": "fiyat-servisi",
     "status": "up",
     "uptime": "100.00%",
@@ -91,8 +91,8 @@
   },
   {
     "name": "Sipariş ve Hesap Sistemi",
-    "url": "https://api.solartoptan.com/store/regions?fields=id",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "url": "https://dev-api.solartoptan.com/health/ready",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/server.svg",
     "slug": "siparis-ve-hesap-sistemi",
     "status": "up",
     "uptime": "100.00%",
@@ -108,9 +108,27 @@
     "dailyMinutesDown": {}
   },
   {
+    "name": "Arka Plan İşleri",
+    "url": "https://dev-api.solartoptan.com/health/ready?component=worker",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/cpu.svg",
+    "slug": "arka-plan-isleri",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 160,
+    "timeDay": 160,
+    "timeWeek": 160,
+    "timeMonth": 160,
+    "timeYear": 160,
+    "dailyMinutesDown": {}
+  },
+  {
     "name": "Ürün Görselleri",
     "url": "https://cdn.solartoptan.com/11-16-01M6DYJG26098KY0BTWVH2KVE9.png",
-    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg",
+    "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/image.svg",
     "slug": "ueruen-goerselleri",
     "status": "up",
     "uptime": "100.00%",
