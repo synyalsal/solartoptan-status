@@ -1,31 +1,125 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Solar Toptan servis durumu - https://github.com/synyalsal/solartoptan-status
+# Bağımsız çalışır: kontroller GitHub Actions'ta (5 dk), sayfa GitHub Pages'ta.
+# Solar Toptan sunucuları veya vitrin çökse bile bu sayfa açık kalır.
+# Ana repo dokümanı: solartoptan/docs/durum-sayfasi.md
+owner: synyalsal
+repo: solartoptan-status
 
+# Kural: kullanıcıya görünen adlarda kullandığımız dış servislerin adı geçmez.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Vitrin
+    url: https://solartoptan.com/
+    maxResponseTime: 5000
+  - name: Ürün Kataloğu
+    url: https://solartoptan.com/store
+    maxResponseTime: 5000
+  - name: Kategoriler
+    url: https://solartoptan.com/categories
+    maxResponseTime: 5000
+  - name: Ürün Arama
+    url: https://solartoptan.com/api/search
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"queries":[{"entity":"product","pagination":{"take":1}}]}'
+    maxResponseTime: 5000
+  - name: Fiyat Servisi
+    url: https://solartoptan.com/api/prices
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"ids":["prod_status_check"]}'
+    maxResponseTime: 5000
+  - name: Sipariş ve Hesap Sistemi
+    # Yayınlanabilir (public) anahtar: vitrinin tarayıcı koduna zaten gömülü,
+    # gizli değil. Veritabanına giden hafif bir okuma.
+    url: https://api.solartoptan.com/store/regions?fields=id
+    headers:
+      - "x-publishable-api-key: pk_723252dba7163e3e0c5f6857fba491cf90ec5b614aeac47e7bed4215155a43a6"
+    maxResponseTime: 5000
+  - name: Ürün Görselleri
+    url: https://cdn.solartoptan.com/11-16-01M6DYJG26098KY0BTWVH2KVE9.png
+    maxResponseTime: 5000
+
+# Kesinti olunca açılan olay kaydı bu kişiye atanır (GitHub bildirimi = alarm).
+assignees:
+  - synyalsal
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Önizleme: https://synyalsal.github.io/solartoptan-status/
+  # Canlıya alınırken: baseUrl satırı silinir, cname: status.solartoptan.com eklenir.
+  baseUrl: /solartoptan-status
+  logoUrl: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+  favicon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/favicon.ico
+  name: Solar Toptan Servis Durumu
+  introTitle: "**Solar Toptan** servis durumu"
+  introMessage: "Vitrin, sipariş, fiyat ve arama servislerimizin anlık durumu. Kontroller her 5 dakikada bir, Solar Toptan altyapısından **bağımsız** olarak yapılır."
+  theme: light
   navbar:
-    - title: Status
+    - title: Durum
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: solartoptan.com
+      href: https://solartoptan.com
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  locale: tr-TR
+  activeIncidents: Aktif Olaylar
+  allSystemsOperational: Tüm sistemler çalışıyor
+  incidentReport: "Olay #$NUMBER raporu →"
+  activeIncidentSummary: "$DATE tarihinde açıldı, $POSTS güncelleme"
+  incidentTitle: "Olay #$NUMBER Ayrıntıları"
+  incidentDetails: Olay Ayrıntıları
+  incidentFixed: Çözüldü
+  incidentOngoing: Devam ediyor
+  incidentOpenedAt: Açılış
+  incidentClosedAt: Kapanış
+  incidentViewOnGitHub: Ayrıntıları görüntüle ve takip et
+  incidentCommentSummary: "$DATE - $AUTHOR"
+  incidentBack: ← Tüm olaylara dön
+  pastIncidents: Geçmiş Olaylar
+  pastIncidentsResolved: "$MINUTES dakikada çözüldü, $POSTS güncelleme"
+  liveStatus: Anlık Durum
+  overallUptime: "Genel erişilebilirlik: $UPTIME"
+  overallUptimeTitle: Genel erişilebilirlik
+  averageResponseTime: "Ortalama yanıt süresi: $TIMEms"
+  averageResponseTimeTitle: Ortalama yanıt
+  sevelDayResponseTime: 7 günlük yanıt süresi
+  responseTimeMs: Yanıt süresi (ms)
+  up: Çalışıyor
+  down: Kesinti
+  degraded: Yavaş
+  ms: ms
+  loading: Yükleniyor
+  navGitHub: Kaynak
+  footer: "Bu sayfa Solar Toptan altyapısından bağımsız çalışır. [Kaynak]($REPO)"
+  rateLimitExceededTitle: Çok fazla istek
+  rateLimitExceededIntro: Kısa sürede çok fazla istek yapıldı. Lütfen bir süre sonra tekrar deneyin.
+  rateLimitExceededWhatDoesErrorMean: Bu hata ne anlama geliyor?
+  rateLimitExceededErrorMeaning: Bu sayfa anlık durumu barındığı platformun API'sinden okur. Her IP adresi için saatlik bir istek sınırı vardır ve bu sınır doldu.
+  rateLimitExceededErrorHowCanFix: Nasıl düzelir?
+  rateLimitExceededErrorFix: Bir saat içinde sınır kendiliğinden sıfırlanır. İsterseniz kişisel erişim anahtarı ekleyerek sınırı artırabilirsiniz.
+  rateLimitExceededGeneratePAT: Erişim anahtarı nasıl oluşturulur?
+  rateLimitExceededHasSet: Kişisel erişim anahtarı tanımlı.
+  rateLimitExceededRemoveToken: Anahtarı kaldır
+  rateLimitExceededGitHubPAT: Kişisel erişim anahtarı
+  rateLimitExceededCopyPastePAT: Anahtarı yapıştırın
+  rateLimitExceededSaveToken: Kaydet
+  errorTitle: Bir hata oluştu
+  errorIntro: Güncel durum bilgisi alınırken bir hata oluştu.
+  errorText: Birkaç dakika sonra tekrar deneyebilirsiniz.
+  errorHome: Ana sayfaya dön
+  pastScheduledMaintenance: Geçmiş Planlı Bakımlar
+  scheduledMaintenance: Planlı Bakım
+  scheduledMaintenanceSummaryStarted: "$DATE tarihinde başladı, $DURATION dakika"
+  scheduledMaintenanceSummaryStarts: "$DATE tarihinde başlayacak, $DURATION dakika"
+  startedAt: Başlangıç
+  startsAt: Başlayacak
+  duration: Süre
+  durationMin: "$DURATION dakika"
+  incidentCompleted: Tamamlandı
+  incidentScheduled: Planlandı
+  duration24H: 24s
+  duration7D: 7g
+  duration30D: 30g
+  duration1Y: 1y
+  durationAll: tümü
