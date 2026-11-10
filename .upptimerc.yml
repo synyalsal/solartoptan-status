@@ -9,19 +9,19 @@ repo: solartoptan-status
 sites:
   - name: Vitrin
     url: https://solartoptan.com/
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/store.svg
     maxResponseTime: 5000
   - name: Ürün Kataloğu
     url: https://solartoptan.com/store
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/package.svg
     maxResponseTime: 5000
   - name: Kategoriler
     url: https://solartoptan.com/categories
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/layout-grid.svg
     maxResponseTime: 5000
   - name: Ürün Arama
     url: https://solartoptan.com/api/search
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/search.svg
     method: POST
     headers:
       - "Content-Type: application/json"
@@ -29,23 +29,28 @@ sites:
     maxResponseTime: 5000
   - name: Fiyat Servisi
     url: https://solartoptan.com/api/prices
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/tag.svg
     method: POST
     headers:
       - "Content-Type: application/json"
     body: '{"ids":["prod_status_check"]}'
     maxResponseTime: 5000
+  # Backend hazırlık kontrolü (/health/ready): veritabanı + Redis; biri
+  # çökerse 503. /health (liveness) kullanılmaz - sabit "OK" döner.
+  # ÖNİZLEME: yeni uç henüz sadece dev'de var. Canlıya alınırken
+  # dev-api.solartoptan.com → api.solartoptan.com yapılır.
   - name: Sipariş ve Hesap Sistemi
-    # Yayınlanabilir (public) anahtar: vitrinin tarayıcı koduna zaten gömülü,
-    # gizli değil. Veritabanına giden hafif bir okuma.
-    url: https://api.solartoptan.com/store/regions?fields=id
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
-    headers:
-      - "x-publishable-api-key: pk_723252dba7163e3e0c5f6857fba491cf90ec5b614aeac47e7bed4215155a43a6"
+    url: https://dev-api.solartoptan.com/health/ready
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/server.svg
+    maxResponseTime: 5000
+  # Worker kalp atışı 3 dk'dan eskiyse 503 (cron/kuyruk durmuş).
+  - name: Arka Plan İşleri
+    url: https://dev-api.solartoptan.com/health/ready?component=worker
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/cpu.svg
     maxResponseTime: 5000
   - name: Ürün Görselleri
     url: https://cdn.solartoptan.com/11-16-01M6DYJG26098KY0BTWVH2KVE9.png
-    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/logo.svg
+    icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/image.svg
     maxResponseTime: 5000
 
 # Kesinti olunca açılan olay kaydı bu kişiye atanır (GitHub bildirimi = alarm).
@@ -61,7 +66,9 @@ status-website:
   name: Solar Toptan Servis Durumu
   introTitle: "**Solar Toptan** servis durumu"
   introMessage: "Vitrin, sipariş, fiyat ve arama servislerimizin anlık durumu. Kontroller her 5 dakikada bir, Solar Toptan altyapısından **bağımsız** olarak yapılır."
-  theme: light
+  theme: night
+  # Vitrinle uyumlu nötr koyu palet (zinc) - night temasının renklerini ezer.
+  css: ":root{--body-background-color:#09090b;--body-text-color:#e4e4e7;--card-background-color:#18181b;--card-border-color:#27272a;--nav-background-color:#09090b;--nav-border-bottom-color:#27272a;--nav-current-border-bottom-color:#10b981;--up-border-left-color:#10b981;--tag-up-background-color:#10b981;--tag-color:#09090b} a{color:#a1a1aa} .changed,.status{border-radius:12px} article,section>a,.card{border-radius:12px}"
   navbar:
     - title: Durum
       href: /
@@ -97,8 +104,8 @@ i18n:
   degraded: Yavaş
   ms: ms
   loading: Yükleniyor
-  navGitHub: Kaynak
-  footer: "Bu sayfa Solar Toptan altyapısından bağımsız çalışır. [Kaynak]($REPO)"
+  navGitHub: ""
+  footer: "Bu sayfa Solar Toptan altyapısından bağımsız çalışır."
   rateLimitExceededTitle: Çok fazla istek
   rateLimitExceededIntro: Kısa sürede çok fazla istek yapıldı. Lütfen bir süre sonra tekrar deneyin.
   rateLimitExceededWhatDoesErrorMean: Bu hata ne anlama geliyor?
