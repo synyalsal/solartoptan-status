@@ -37,15 +37,13 @@ sites:
     maxResponseTime: 5000
   # Backend hazırlık kontrolü (/health/ready): veritabanı + Redis; biri
   # çökerse 503. /health (liveness) kullanılmaz - sabit "OK" döner.
-  # ÖNİZLEME: yeni uç henüz sadece dev'de var. Canlıya alınırken
-  # dev-api.solartoptan.com → api.solartoptan.com yapılır.
   - name: Sipariş ve Hesap Sistemi
-    url: https://dev-api.solartoptan.com/health/ready
+    url: https://api.solartoptan.com/health/ready
     icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/server.svg
     maxResponseTime: 5000
   # Worker kalp atışı 3 dk'dan eskiyse 503 (cron/kuyruk durmuş).
   - name: Arka Plan İşleri
-    url: https://dev-api.solartoptan.com/health/ready?component=worker
+    url: https://api.solartoptan.com/health/ready?component=worker
     icon: https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/cpu.svg
     maxResponseTime: 5000
   - name: Ürün Görselleri
