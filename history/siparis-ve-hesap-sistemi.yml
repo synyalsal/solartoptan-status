@@ -1,7 +1,7 @@
-url: https://dev-api.solartoptan.com/health/ready
+url: https://api.solartoptan.com/health/ready
 status: up
 code: 200
-responseTime: 542
-lastUpdated: 2026-11-10T15:12:08.243Z
+responseTime: 685
+lastUpdated: 2026-11-11T02:38:49.676Z
 startTime: 2026-11-10T14:10:26.799Z
 generator: Upptime <https://github.com/upptime/upptime>
