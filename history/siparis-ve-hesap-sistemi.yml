@@ -1,7 +1,7 @@
 url: https://api.solartoptan.com/health/ready
-status: down
-code: 502
-responseTime: 673
-lastUpdated: 2026-11-13T00:03:28.620Z
+status: up
+code: 200
+responseTime: 561
+lastUpdated: 2026-11-13T00:05:22.991Z
 startTime: 2026-11-10T14:10:26.799Z
 generator: Upptime <https://github.com/upptime/upptime>
