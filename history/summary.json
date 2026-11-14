@@ -116,20 +116,21 @@
     "url": "https://api.solartoptan.com/health/ready?component=worker",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/cpu.svg",
     "slug": "arka-plan-isleri",
-    "status": "down",
-    "uptime": "99.87%",
-    "uptimeDay": "99.83%",
-    "uptimeWeek": "99.87%",
-    "uptimeMonth": "99.87%",
-    "uptimeYear": "99.87%",
-    "time": 486,
-    "timeDay": 471,
-    "timeWeek": 486,
-    "timeMonth": 486,
-    "timeYear": 486,
+    "status": "up",
+    "uptime": "99.83%",
+    "uptimeDay": "99.84%",
+    "uptimeWeek": "99.83%",
+    "uptimeMonth": "99.83%",
+    "uptimeYear": "99.83%",
+    "time": 488,
+    "timeDay": 477,
+    "timeWeek": 488,
+    "timeMonth": 488,
+    "timeYear": 488,
     "dailyMinutesDown": {
       "2026-11-12": 2,
-      "2026-11-13": 4
+      "2026-11-13": 4,
+      "2026-11-14": 2
     }
   },
   {
