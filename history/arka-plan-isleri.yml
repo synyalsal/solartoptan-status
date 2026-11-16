@@ -1,7 +1,7 @@
 url: https://api.solartoptan.com/health/ready?component=worker
 status: up
 code: 200
-responseTime: 186
-lastUpdated: 2026-11-16T09:02:57.600Z
+responseTime: 432
+lastUpdated: 2026-11-16T10:02:58.010Z
 startTime: 2026-11-10T15:11:20.683Z
 generator: Upptime <https://github.com/upptime/upptime>
