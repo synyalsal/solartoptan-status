@@ -58,21 +58,21 @@
     "url": "https://solartoptan.com/api/search",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/search.svg",
     "slug": "ueruen-arama",
-    "status": "down",
-    "uptime": "99.83%",
-    "uptimeDay": "99.29%",
-    "uptimeWeek": "99.90%",
-    "uptimeMonth": "99.83%",
-    "uptimeYear": "99.83%",
+    "status": "up",
+    "uptime": "99.81%",
+    "uptimeDay": "99.01%",
+    "uptimeWeek": "99.86%",
+    "uptimeMonth": "99.81%",
+    "uptimeYear": "99.81%",
     "time": 1257,
-    "timeDay": 1038,
+    "timeDay": 1042,
     "timeWeek": 1193,
     "timeMonth": 1257,
     "timeYear": 1257,
     "dailyMinutesDown": {
       "2026-11-13": 2,
       "2026-11-18": 25,
-      "2026-11-25": 11
+      "2026-11-25": 15
     }
   },
   {
@@ -98,21 +98,21 @@
     "url": "https://api.solartoptan.com/health/ready",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/server.svg",
     "slug": "siparis-ve-hesap-sistemi",
-    "status": "down",
-    "uptime": "99.86%",
-    "uptimeDay": "99.33%",
-    "uptimeWeek": "99.90%",
-    "uptimeMonth": "99.86%",
-    "uptimeYear": "99.86%",
+    "status": "up",
+    "uptime": "99.84%",
+    "uptimeDay": "99.05%",
+    "uptimeWeek": "99.86%",
+    "uptimeMonth": "99.84%",
+    "uptimeYear": "99.84%",
     "time": 611,
-    "timeDay": 554,
+    "timeDay": 556,
     "timeWeek": 621,
     "timeMonth": 611,
     "timeYear": 611,
     "dailyMinutesDown": {
       "2026-11-13": 2,
       "2026-11-18": 20,
-      "2026-11-25": 10
+      "2026-11-25": 14
     }
   },
   {
@@ -120,17 +120,17 @@
     "url": "https://api.solartoptan.com/health/ready?component=worker",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/cpu.svg",
     "slug": "arka-plan-isleri",
-    "status": "down",
-    "uptime": "99.60%",
-    "uptimeDay": "99.21%",
-    "uptimeWeek": "99.67%",
-    "uptimeMonth": "99.60%",
-    "uptimeYear": "99.60%",
-    "time": 491,
-    "timeDay": 463,
-    "timeWeek": 493,
-    "timeMonth": 491,
-    "timeYear": 491,
+    "status": "up",
+    "uptime": "99.58%",
+    "uptimeDay": "98.92%",
+    "uptimeWeek": "99.63%",
+    "uptimeMonth": "99.58%",
+    "uptimeYear": "99.58%",
+    "time": 490,
+    "timeDay": 456,
+    "timeWeek": 491,
+    "timeMonth": 490,
+    "timeYear": 490,
     "dailyMinutesDown": {
       "2026-11-12": 2,
       "2026-11-13": 4,
@@ -145,7 +145,7 @@
       "2026-11-22": 2,
       "2026-11-23": 9,
       "2026-11-24": 2,
-      "2026-11-25": 11
+      "2026-11-25": 15
     }
   },
   {
