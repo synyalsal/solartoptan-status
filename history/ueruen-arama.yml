@@ -1,7 +1,7 @@
 url: https://solartoptan.com/api/search
-status: down
-code: 530
-responseTime: 129
-lastUpdated: 2026-11-25T19:40:35.445Z
+status: up
+code: 200
+responseTime: 1106
+lastUpdated: 2026-11-25T19:45:25.841Z
 startTime: 2026-11-10T14:10:24.123Z
 generator: Upptime <https://github.com/upptime/upptime>
