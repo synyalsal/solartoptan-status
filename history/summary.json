@@ -58,21 +58,22 @@
     "url": "https://solartoptan.com/api/search",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/search.svg",
     "slug": "ueruen-arama",
-    "status": "up",
-    "uptime": "99.82%",
-    "uptimeDay": "99.01%",
-    "uptimeWeek": "99.86%",
-    "uptimeMonth": "99.82%",
-    "uptimeYear": "99.82%",
-    "time": 1254,
-    "timeDay": 1018,
-    "timeWeek": 1184,
-    "timeMonth": 1254,
-    "timeYear": 1254,
+    "status": "down",
+    "uptime": "99.81%",
+    "uptimeDay": "98.96%",
+    "uptimeWeek": "99.85%",
+    "uptimeMonth": "99.81%",
+    "uptimeYear": "99.81%",
+    "time": 1252,
+    "timeDay": 996,
+    "timeWeek": 1179,
+    "timeMonth": 1252,
+    "timeYear": 1252,
     "dailyMinutesDown": {
       "2026-11-13": 2,
       "2026-11-18": 25,
-      "2026-11-25": 15
+      "2026-11-25": 15,
+      "2026-11-26": 1
     }
   },
   {
@@ -98,21 +99,22 @@
     "url": "https://api.solartoptan.com/health/ready",
     "icon": "https://raw.githubusercontent.com/synyalsal/solartoptan-status/master/assets/icons/server.svg",
     "slug": "siparis-ve-hesap-sistemi",
-    "status": "up",
+    "status": "down",
     "uptime": "99.84%",
-    "uptimeDay": "99.05%",
+    "uptimeDay": "99.02%",
     "uptimeWeek": "99.86%",
     "uptimeMonth": "99.84%",
     "uptimeYear": "99.84%",
     "time": 610,
-    "timeDay": 557,
+    "timeDay": 554,
     "timeWeek": 622,
     "timeMonth": 610,
     "timeYear": 610,
     "dailyMinutesDown": {
       "2026-11-13": 2,
       "2026-11-18": 20,
-      "2026-11-25": 14
+      "2026-11-25": 14,
+      "2026-11-26": 0
     }
   },
   {
